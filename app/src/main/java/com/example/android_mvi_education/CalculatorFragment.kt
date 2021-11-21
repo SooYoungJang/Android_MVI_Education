@@ -30,7 +30,7 @@ class CalculatorFragment : BaseFragment<CalculState, CalculEffect, FragmentCalcu
     override fun handleSideEffect(sideEffect: CalculEffect) = binding {
         when (sideEffect) {
             is CalculEffect.Toast -> {
-                Toast.makeText(activity,"sdlkfjsldkfj ${sideEffect.msg}",Toast.LENGTH_SHORT).show()
+                Toast.makeText(activity,"kjnknknknknk ${sideEffect.msg}",Toast.LENGTH_SHORT).show()
             }
         }
     }
