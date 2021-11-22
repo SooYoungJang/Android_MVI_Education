@@ -32,6 +32,9 @@ class CalculatorFragment : BaseFragment<CalculState, CalculEffect, FragmentCalcu
             is CalculEffect.Toast -> {
                 Toast.makeText(activity,"kjnknknknknk ${sideEffect.msg}",Toast.LENGTH_SHORT).show()
             }
+            is CalculEffect.textMessage -> {
+                textView.setText(sideEffect.msg)
+            }
         }
     }
 
