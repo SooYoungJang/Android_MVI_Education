@@ -12,12 +12,10 @@ class CalculatorViewModel : BaseViewModel<CalculState, CalculEffect>() {
 
 
     override val container =
-        container<CalculState, CalculEffect>(CalculState(2,3)) {
-            onCreate()
-        }
+        container<CalculState, CalculEffect>(CalculState())
 
 
-    private fun onCreate() = intent {
+     fun onCreate() = intent {
         val multiple = state.x.times(5)
         reduce { state.copy(x = multiple) }
         postSideEffect(CalculEffect.Toast("hihihi"))

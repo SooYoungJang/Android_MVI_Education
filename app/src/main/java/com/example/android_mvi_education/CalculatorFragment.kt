@@ -22,6 +22,13 @@ class CalculatorFragment : BaseFragment<CalculState, CalculEffect, FragmentCalcu
 ) {
     override val viewModel: CalculatorViewModel by viewModels()
 
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        viewModel.onCreate()
+    }
+
+    
     override fun renderState(state: CalculState) {
         Log.d("sdf", " akljalskdfj ${state.x}")
         Log.d("sdf", " a11111kljalskdfj ${state.y}")
