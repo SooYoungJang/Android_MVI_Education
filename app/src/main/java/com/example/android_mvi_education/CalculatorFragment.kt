@@ -28,7 +28,6 @@ class CalculatorFragment : BaseFragment<CalculState, CalculEffect, FragmentCalcu
         viewModel.onCreate()
     }
 
-    
     override fun renderState(state: CalculState) {
         Log.d("sdf", " akljalskdfj ${state.x}")
         Log.d("sdf", " a11111kljalskdfj ${state.y}")
